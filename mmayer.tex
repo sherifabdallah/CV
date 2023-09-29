@@ -1,0 +1,286 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7, 9 Aug 2023) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" mmayer.tex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.tex}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Sherif Abdullah}
+\tagline{Software Engineer}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{sherifabdalla2005@gmail.com}
+  \phone{+20 106 140 3772}
+  \mailaddress{Salah El-Din Street, Zamalek - Cairo}
+  % 
+
+  \location{Cairo, Egypt}
+  % \homepage{x.x.com}
+  % \twitter{@marissamayer}
+  \linkedin{sherif-abdullah-b94385236}
+  \github{github.com/sherif-abdallah} % I'm just making this up though.
+%   \orcid{0000-0000-0000-0000} % Obviously making this up too.
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+	%%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Frontend Developer}{Canspect Corporation}{Dec 2019 - Aug 2022}{Cairo, Egypt}
+
+\begin{itemize}
+
+\item Designed a ERP system based on Industrial Automation structure
+\item Version Control using Git and GitHub
+\item Tasks management using Agile Methodology
+
+
+\end{itemize}
+
+
+\cvsection{Projects}
+
+\cvevent{Geekshub (Social Media Platform)}{Django, Python, JavaScript, jQuery, Ajax, SQL, HTML, CSS}{Jan 2021 - Aug 2022}{}
+\begin{itemize}
+\item Django-based social networking platform with chat system, enabling tech enthusiasts to connect, share content, and foster collaborative learning.
+
+\end{itemize}
+
+\divider
+
+
+\cvevent{EgyFlix (Streaming media Platform)}{Django, Python, JavaScript, jQuery, SQL, HTML, CSS}{May 2021 - Sep 2021}{}
+\begin{itemize}
+\item Django-powered streaming platform offering free access to TV shows and movies with offline viewing options across various platforms, complemented by an admin panel for efficient management.
+
+\end{itemize}
+
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{B.Sc.\ in Computer Science and Artificial Intelligence}{Modern University for Technology \&   Information, Egypt}{Oct 2023 - Aug 2027}{}
+
+
+\cvsection{Skills}
+
+\cvtag{Python}
+\cvtag{C++}
+% \cvtag{C#}
+\cvtag{JavaScript}
+\cvtag{PHP}
+\cvtag{jQuery}
+\cvtag{Ajax}
+\cvtag{REST APIs}
+\cvtag{SQL}
+\cvtag{HTML}
+\cvtag{CSS}
+\cvtag{Bootstrap}
+\cvtag{Django}
+\cvtag{Artificial Intelligence}
+\cvtag{Git \& GitHub}
+\cvtag{Linux}
+
+\cvsection{Soft Skills}
+
+\cvtag{Learning Potential}
+\cvtag{Team Work}
+\cvtag{Organization}
+\cvtag{Flexibility}
+\cvtag{Responsibility}
+\cvtag{Multitasking}
+
+\cvsection{Certification}
+
+\begin{itemize}
+\item Full Stack Development Track - Udacity
+\item Front End Development Track - Udacity
+\item Web Development Challanger Track - Egypt FWD
+\item JavaScript Essential Training - Linkedin Learning
+\item Machine Learning with Python - freeCodeCamp
+\item Python Django Web Framework \ - freeCodeCamp
+\item Data Analysis with Python - freeCodeCamp
+\item Scientific Computing with Python - freeCodeCamp
+\item Python Core - Sololearn
+\item Python Core - Sololearn
+\item PHP Course - Sololearn
+
+
+
+
+
+
+\end{itemize}
+
+
+\cvsection{Languages}
+
+\cvskill{Arabic}{5}
+% \divider
+
+\cvskill{English}{4.5}
+% \divider
+
+\cvskill{French}{3.5} %% supports X.5 values.
+
+
+\end{paracol}
+
+\end{document}
